@@ -1,0 +1,6 @@
+Shorten a link:
+
+<%= simple_form_for @url do |f| %>
+  <%= f.input :original_url, as: :string, placeholder: "Enter URL to shorten", label: false %>
+  <%= f.submit "Shorten" %>
+<% end %>
