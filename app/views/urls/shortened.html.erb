@@ -1,12 +1,9 @@
 
 Your shortened URL is:
-
-<%= @url.original_url %>
-
-<a href="<%= request.base_url + "/" + @url.short_url %>"><%= @url.original_url %></a>
-
+<a href="<%= request.base_url + "/" + @url.short_url %>"><%= request.base_url + "/" + @url.short_url %></a><br>
+<%= link(@url.original_url) %>
 <%  @allurl.each do |url| %>
-Original URL: <%= url.original_url %>
-Shortened URL: <a href="<%= request.base_url + "/" + url.short_url %>"><%= request.base_url + "/" + url.short_url %></a>
-
+Original URL: <%= url.original_url %> <br>
+Shortened URL: <a href="<%= request.base_url + "/" + url.short_url %>"><%= request.base_url + "/" + url.short_url %></a><br>
+<p></p>
 <% end %>
