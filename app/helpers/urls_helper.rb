@@ -8,7 +8,11 @@ module UrlsHelper
       title       = doc.at('meta[property="og:title"]')['content']
       description = doc.at('meta[property="og:description"]')['content']
       image       = doc.at('meta[property="og:image"]')['content']
+      if title = doc.at('meta[property="og:title"]')['content']
+        return title
+      elsif sitename || title || description || image
       return title
-      
+    end
+
   end
 end

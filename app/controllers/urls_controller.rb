@@ -11,6 +11,7 @@ class UrlsController < ApplicationController
 
   def shortened
     @allurl = Url.all
+  
     @url = Url.find_by_short_url(params[:short_url])
   end
 
